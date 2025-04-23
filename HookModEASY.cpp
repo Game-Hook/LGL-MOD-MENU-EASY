@@ -13,9 +13,14 @@
 //hook_name_point_func || اي اسم بالك بس كون يختلف عن اسم الاول
 // hook_name_point_func => مؤشر (pointer) إلى الدالة الأصلية لتحفض القيمه قبل تعديل
 
-//edit_Bool || قيمة تعديل (true or false)
-// edit_Bool => القيمة التي يتم إرجاعها إذا تم تفعيل الهوك
-
+//edit_Bool || قيمة تعديل 
+// edit_Bool => (true or false)
+//edit_Float || قيمة تعديل
+// edit_Float => 9999.0f
+//edit_Int || قيمة تعديل 
+// edit_Int => 9999
+//edit_Double || قيمة تعديل
+// edit_Double => 9999.0
 
 // BOOL Hook
 #define ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool) \
