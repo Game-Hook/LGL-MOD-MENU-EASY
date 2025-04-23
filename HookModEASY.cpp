@@ -82,8 +82,8 @@ int hook_name_fake_func(void *instance) { \
 
 //كملنا من جميع الدوال التي تعمل مع اوفسيت
 // Done defining all functions that work with offset
-
-
+//##################################################################################################################################
+//##################################################################################################################################
 /* Hooking field offset method */
 /* طريقة هوك باستخدام أوفست الحقول (المتغيرات داخل الكائن) */
 /* طريقة هوك باستخدام أوفست الحقول (المتغيرات داخل الكائن) */
@@ -139,9 +139,21 @@ void hook_name_fake_func(void *instance) { \
     return hook_name_point_func(instance); \
 }
 
-
-
-
+//##################################################################################################################################
+//##################################################################################################################################
+/* Hooking void (without update offset)
+/* Bool void type: */
+#define ADD_BOOL_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool) \
+void (*hook_name_point_func)(void *instance, bool value);
+void hook_name_point_func(void *instance, bool value) {
+    if (instance != NULL) {
+        if (hook_name) {
+            hook_name_point_func(instance, true); 
+            return;
+        }
+    }
+    return hook_name_point_func(instance,value);
+}
 
 
 
