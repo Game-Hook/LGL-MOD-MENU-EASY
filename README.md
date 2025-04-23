@@ -16,6 +16,12 @@
 ```cpp
 ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
 ```
+```cpp
+MSHookFunction(
+ (void *)getAbsoluteAddress(targetLibName, 0x0000),
+ (void*)hook_name_fake_func,
+ (void **) hook_name_point_func);
+```
 **حيث ان**
 - **hook_name |تمثل**
 - **bool mod1 = false;**
@@ -23,3 +29,62 @@ ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
 - **hook_name_fake_func | هم اسم بكيف بس كون يختلف عن الاول**
 - **edit_Bool | تعديل الذي تختاره من الخيارين اسفل**
 - **(true ot false) تعديل واحد من ذني ثنين**
+  ---
+  
+  ### مثال اضافه تفعيله
+  
+**//offset 0x123456**
+
+**public bool Shob() {}**
+
+
+**اكواد اضيفها في السورس او `main.cpp`**
+
+
+**bool mod1 = false;**
+
+**ADD_BOOL_HOOK(mod1, oldShop, Shop, true);**
+
+**case 1:**
+
+**mod1 = boolean;**
+
+**break;**
+
+
+  **وريدك ضيف مكان تفعيلات هاذا الكود**
+  
+  
+  MSHookFunction(
+ (void *)getAbsoluteAddress(targetLibName, 0x123456),
+ (void*)Shop,
+ (void **) oldShop);
+ ### وهاذا الكلام ينطبق على ثلاثه دوال
+
+## #ADD_FLOAT_HOOK
+
+**//offset 0x123456**
+
+**public speed Shob() {}**
+
+## #CREATE_DOUBLE_HOOK**
+
+**//offset 0x123456**
+
+**public bool Damage() {}**
+
+## #CREATE_INT_HOOK**
+
+**//offset 0x123456**
+
+**public int Jump() {}**
+
+**حيث يكون الاختلاف بسيط فقط في نوع بينات وتاخذ مناسب**
+
+
+
+
+
+
+
+
