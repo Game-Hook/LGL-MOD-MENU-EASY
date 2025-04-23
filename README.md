@@ -21,5 +21,5 @@ ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
 - **bool mod1 = false;**
 - **hook_name_point_func | اي اسم تريده سميه بكيفك**
 - **hook_name_fake_func | هم اسم بكيف بس كون يختلف عن الاول**
-- **edit_Bool هو تعديل يعني قيمه تريدها وعن خيارين**
+- **edit_Bool | تعديل الذي تختاره من الخيارين اسفل**
 - **(true ot false) تعديل واحد من ذني ثنين**
