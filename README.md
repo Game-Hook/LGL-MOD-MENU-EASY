@@ -9,11 +9,3 @@ pam
   <button onclick="copyCode()" style="position:absolute; top:0; right:0;">Copy</button>
 </div>
 
-<script>
-  function copyCode() {
-    const code = document.getElementById("myCode").innerText;
-    navigator.clipboard.writeText(code).then(() => {
-      alert("Copied!");
-    });
-  }
-</script>
