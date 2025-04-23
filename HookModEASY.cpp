@@ -86,6 +86,58 @@ int hook_name_fake_func(void *instance) { \
 
 /* Hooking field offset method */
 /* طريقة هوك باستخدام أوفست الحقول (المتغيرات داخل الكائن) */
+/* طريقة هوك باستخدام أوفست الحقول (المتغيرات داخل الكائن) */
+/* Bool type: */
+// BOOL مع أوفست
+#define ADD_BOOL_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Bool) \
+void (*hook_name_point_func)(void *instance); \
+void hook_name_fake_func(void *instance) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            *(bool *) ((uint32_t) instance + offsetFOR) = edit_Bool; \
+        } \
+    } \
+    return hook_name_point_func(instance); \
+}
+
+/* Float type: */
+// FLOAT مع أوفست
+#define ADD_BOOL_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Float) \
+void (*hook_name_point_func)(void *instance); \
+void hook_name_fake_func(void *instance) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            *(float *) ((uint32_t) instance + offsetFOR) = edit_Float; \
+        } \
+    } \
+    return hook_name_point_func(instance); \
+}
+
+/* Double type: */
+// DOUBLE مع أوفست
+#define ADD_DOUBLE_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Double) \
+void (*hook_name_point_func)(void *instance); \
+void hook_name_fake_func(void *instance) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            *(double *) ((uint32_t) instance + offsetFOR) = edit_Double; \
+        } \
+    } \
+    return hook_name_point_func(instance); \
+}
+
+/* Integer type: */
+// INT مع أوفست
+#define ADD_INT_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Int) \
+void (*hook_name_point_func)(void *instance); \
+void hook_name_fake_func(void *instance) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            *(int *) ((uint32_t) instance + offsetFOR) = edit_Int; \
+        } \
+    } \
+    return hook_name_point_func(instance); \
+}
 
 
 
