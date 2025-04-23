@@ -1,8 +1,9 @@
 # LGL-MOD-MENU-EASY
 LGL-MOD-MENU-EASY
 pam
-// ===== ماكروز الدوال التي تعمل مع الأوفست =====
-#ADD_BOOL_HOOK
+
+# ADD_BOOL_HOOK
+
 ADD_FLOAT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Float)
 CREATE_DOUBLE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double)
 CREATE_INT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int)
