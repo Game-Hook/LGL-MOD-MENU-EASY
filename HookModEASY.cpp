@@ -205,6 +205,67 @@ void hook_name_fake_func(void *instance, int value) { \
 
 //##################################################################################################################################
 //##################################################################################################################################
+/* ===== Hooking void (with update offset) ===== */
+/* ===== ربط دوال void مع تعديل على القيم ===== */
+
+/* Bool void type */
+/* نوع: دالة لا تُرجع شيء وتأخذ قيمة بوليانية */
+#define ADD_BOOL_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Bool) \
+    void (*hook_name_point_func2)(void *instance, bool value); \
+    void (*hook_name_point_func)(void *instance); \
+    void hook_name_fake_func(void *instance) { \
+        if (instance != NULL) { \
+            if (isBoolVoidVariable2) { \
+                hook_name_point_func2(instance, edit_Bool); \
+            } \
+        } \
+        return hook_name_point_func(instance); \
+    }
+
+/* Float void type */
+/* نوع: دالة لا تُرجع شيء وتأخذ قيمة عشرية */
+#define ADD_FLOAT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Float) \
+    void (*hook_name_point_func2)(void *instance, float value); \
+    void (*hook_name_point_func)(void *instance); \
+    void hook_name_fake_func(void *instance) { \
+        if (instance != NULL) { \
+            if (hook_name) { \
+                hook_name_point_func2(instance, edit_Float); \
+            } \
+        } \
+        return hook_name_point_func(instance); \
+    }
+
+/* Double void type */
+/* نوع: دالة لا تُرجع شيء وتأخذ قيمة عشرية مضاعفة */
+#define ADD_DOUBLE_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Double) \
+    void (*hook_name_point_func2)(void *instance, double value); \
+    void (*hook_name_point_func)(void *instance); \
+    void hook_name_fake_func(void *instance) { \
+        if (instance != NULL) { \
+            if (isBoolVoidVariable2) { \
+                hook_name_point_func2(instance, edit_Double); \
+            } \
+        } \
+        return hook_name_point_func(instance); \
+    }
+
+/* Int void type */
+/* نوع: دالة لا تُرجع شيء وتأخذ قيمة عددية صحيحة */
+#define ADD_INT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Int) \
+    void (*hook_name_point_func2)(void *instance, int value); \
+    void (*hook_name_point_func)(void *instance); \
+    void hook_name_fake_func(void *instance) { \
+        if (instance != NULL) { \
+            if (isBoolVoidVariable2) { \
+                hook_name_point_func2(instance, edit_Int); \
+            } \
+        } \
+        return hook_name_point_func(instance); \
+    }
+
+
+
 
 
 
