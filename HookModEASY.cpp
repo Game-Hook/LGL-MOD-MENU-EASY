@@ -141,24 +141,67 @@ void hook_name_fake_func(void *instance) { \
 
 //##################################################################################################################################
 //##################################################################################################################################
-/* Hooking void (without update offset)
+/* Hooking void (without update offset) */
+/* هوك لدوال void (بدون تعديل مباشر على الأوفست داخل الكائن) */
+
 /* Bool void type: */
+/* نوع دالة تستقبل متغير bool وتُرجع void */
 #define ADD_BOOL_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool) \
-void (*hook_name_point_func)(void *instance, bool value);
-void hook_name_point_func(void *instance, bool value) {
-    if (instance != NULL) {
-        if (hook_name) {
-            hook_name_point_func(instance, true); 
-            return;
-        }
-    }
-    return hook_name_point_func(instance,value);
+void (*hook_name_point_func)(void *instance, bool value); \
+void hook_name_fake_func(void *instance, bool value) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            hook_name_point_func(instance, edit_Bool); \
+            return; \
+        } \
+    } \
+    hook_name_point_func(instance, value); \
 }
 
 
+/* Float void type: */
+/* نوع دالة تستقبل متغير float وتُرجع void */
+#define ADD_FLOAT_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Float) \
+void (*hook_name_point_func)(void *instance, float value); \
+void hook_name_fake_func(void *instance, float value) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            hook_name_point_func(instance, edit_Float); \
+            return; \
+        } \
+    } \
+    hook_name_point_func(instance, value); \
+}
 
 
+/* Double void type: */
+/* نوع دالة تستقبل متغير double وتُرجع void */
+#define ADD_DOUBLE_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double) \
+void (*hook_name_point_func)(void *instance, double value); \
+void hook_name_fake_func(void *instance, double value) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            hook_name_point_func(instance, edit_Double); \
+            return; \
+        } \
+    } \
+    hook_name_point_func(instance, value); \
+}
 
+
+/* Int void type: */
+/* نوع دالة تستقبل متغير int وتُرجع void */
+#define ADD_INT_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int) \
+void (*hook_name_point_func)(void *instance, int value); \
+void hook_name_fake_func(void *instance, int value) { \
+    if (instance != NULL) { \
+        if (hook_name) { \
+            hook_name_point_func(instance, edit_Int); \
+            return; \
+        } \
+    } \
+    hook_name_point_func(instance, value); \
+}
 
 
 
