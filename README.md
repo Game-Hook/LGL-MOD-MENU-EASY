@@ -20,7 +20,7 @@ ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
 MSHookFunction(
  (void *)getAbsoluteAddress(targetLibName, 0x0000),
  (void*)hook_name_fake_func,
- (void **) hook_name_point_func);
+ (void **) &hook_name_point_func);
 ```
 **حيث ان**
 - **hook_name |تمثل**
@@ -32,6 +32,8 @@ MSHookFunction(
   ---
   
   ### مثال اضافه تفعيله
+
+  
   
 **//offset 0x123456**
 
@@ -58,7 +60,7 @@ MSHookFunction(
   MSHookFunction(
  (void *)getAbsoluteAddress(targetLibName, 0x123456),
  (void*)Shop,
- (void **) oldShop);
+ (void **) &oldShop);
  ### وهاذا الكلام ينطبق على ثلاثه دوال
 
 ## #ADD_FLOAT_HOOK
@@ -84,9 +86,46 @@ MSHookFunction(
 ---
 ## الان نجي للبيانات التي تكون باهذي الطريقه والتي تحتاج الى `offset` و `offset Update`
 
+### # ADD_FLOAT_UPDATE_HOOK
+```cpp
+ADD_FLOAT_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Float);
+```
+```cpp
+MSHookFunction(
+ (void *)getAbsoluteAddress(targetLibName, 0x0000),
+ (void*)hook_name_fake_func,
+ (void **) &hook_name_point_func);
+```
+
+
+## مثال للفهم 
+**bool mod2 = false;**
+
+
+**case 2:**
+
+
+**mod2 = boolean;**
+
+
+**break;**
+
+
 **public float speed;//0x20**
+
 
 **//offset 0x123456**
 
+
 **public void update (){}**
+
+
+**ADD_FLOAT_UPDATE_HOOK(mod2, old_Speed, speed, 0x20, 50.0f);// اوفست اول**
+
+
+`MSHookFunction(
+ (void *)getAbsoluteAddress(targetLibName, 0x123456),
+ (void*)speed,
+ (void **) &old_speed);`
+
 
