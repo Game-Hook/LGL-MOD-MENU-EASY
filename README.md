@@ -128,4 +128,12 @@ MSHookFunction(
  (void*)speed,
  (void **) &old_speed);`
 
+**وهاذا الكلام ينطبق على الدوال التاليه**
+
+
+## #ADD_BOOL_UPDATE_HOOK
+## #ADD_DOUBLE_UPDATE_HOOK
+## #ADD_INT_UPDATE_HOOK
+
+---
 
