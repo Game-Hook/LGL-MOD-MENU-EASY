@@ -107,7 +107,7 @@ void hook_name_fake_func(void *instance) { \
 
 /* Float type: */
 // FLOAT مع أوفست
-#define ADD_BOOL_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Float) \
+#define ADD_FLOAT_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Float) \
 void (*hook_name_point_func)(void *instance); \
 void hook_name_fake_func(void *instance) { \
     if (instance != NULL) { \
