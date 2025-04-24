@@ -55,7 +55,7 @@ float hook_name_fake_func(void *instance) { \
 
 // DOUBLE Hook
 /* Double type: */
-#define CREATE_DOUBLE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double) \
+#define ADD_DOUBLE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double) \
 double (*hook_name_point_func)(void *instance); \
 double hook_name_fake_func(void *instance) { \
     if (instance != NULL) { \
@@ -71,7 +71,7 @@ double hook_name_fake_func(void *instance) { \
 
 // INT Hook
 /* Interger type: */
-#define CREATE_INT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int) \
+#define ADD_INT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int) \
 int (*hook_name_point_func)(void *instance); \
 int hook_name_fake_func(void *instance) { \
     if (instance != NULL) { \
