@@ -154,4 +154,25 @@ MSHookFunction(
 ## #ADD_INT_UPDATE_HOOK
 
 ---
+## الان نجي الى الدوال التي تكون void 
 
+
+
+
+
+
+
+
+
+
+
+
+---
+**الدوال المستغدمه**.
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code1.png)
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code2.png)
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code3.png)
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/1-1.png)
+
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code4.png)
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/2.png)
