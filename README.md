@@ -24,23 +24,21 @@
 ## انتقل الى الموضوع الذي تريده
 
 <a href="#mod"> offset نوع الاول الذي يتعامل مع  </a>
+
 <a href="#mod2"> offset + Update نوع ثاني الذي يتعامل مع</a>
-<a href="#mod"> void نوع الاول الذي يتعامل مع اوفست </a>
-<a href="#mod2"> void +Update نوع ثاني الذي يتعامل معoffset + Update</a>
+
+<a href="#mod3"> void نوع الاول الذي يتعامل مع اوفست </a>
+
+<a href="#mod4"> void +Update نوع ثاني الذي يتعامل مع</a>
+
+<a href="#mod5"> جمعت دوال كلها </a>
 
 
-<div id="mod">
-  <!-- محتوى القسم الأول -->
-</div>
-
-<div id="mod2">
-  <!-- محتوى القسم الثاني -->
-</div>
 
 
 
 ---
-
+<div id="mod">
 ## ماكروز الدوال التي تعمل مع الأوفست
 
 ### # ADD_BOOL_HOOK
@@ -119,8 +117,11 @@ MSHookFunction(
 **public int Jump() {}**
 
 **حيث يكون الاختلاف بسيط فقط في نوع بينات وتاخذ مناسب مع انتباه ان تعديل لازم يكون مناسب حسب نوع حيث ان `float = 9999.0f` حيث لازم ان تضع له بلنهايه `0f.` ونوع ثاني `double` تنهيه فقط `0.` int اعداد صحيه مثل `123456789`**
-
+</div>
 ---
+
+<div id="mod2">
+  
 ## الان نجي للبيانات التي تكون باهذي الطريقه والتي تحتاج الى `offset` و `offset Update`
 
 ### # ADD_FLOAT_UPDATE_HOOK
@@ -171,8 +172,11 @@ MSHookFunction(
 ## #ADD_BOOL_UPDATE_HOOK
 ## #ADD_DOUBLE_UPDATE_HOOK
 ## #ADD_INT_UPDATE_HOOK
-
+</div>
 ---
+
+<div id="mod3">
+  
 ## الان نجي الى الدوال التي تكون void 
 ## # ADD_DOUBLE_VOID_HOOK
 `ADD_DOUBLE_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double)`
@@ -210,8 +214,11 @@ MSHookFunction(
 ## #ADD_BOOL_VOID_HOOK
 ## #ADD_FLOAT_VOID_HOOK
 ## #ADD_INT_VOID_HOOK
-
+</div>
 ---
+
+<div id="mod4">
+  
 ### وهاذا اخر نوع الي هو نوع void بس يحتاج Update
 ## #ADD_INT_VOID_UPDATE_HOOK
 
@@ -252,9 +259,9 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x123456), (void *) Spe
 ## #ADD_BOOL_VOID_UPDATE_HOOK
 ## #ADD_FLOAT_VOID_UPDATE_HOOK
 ## #ADD_DOUBLE_VOID_UPDATE_HOOK
-
+</div>
 ---
-
+<div id="mod5">
 ## ملخص سريع جميع البيانات وطرق 
 **اوفسيت فقط**
 
@@ -314,7 +321,7 @@ ADD_DOUBLE_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_fun
 ```cpp
 ADD_INT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Int);
 ```
-
+</div>
 
 ---
 **الدوال المستغدمه**.
