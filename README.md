@@ -155,10 +155,44 @@ MSHookFunction(
 
 ---
 ## الان نجي الى الدوال التي تكون void 
+## # ADD_DOUBLE_VOID_HOOK
+`ADD_DOUBLE_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double)`
+**مثال للفهم**
+
+**bool mod3 = false;**
+
+
+**case 3:**
+
+
+**mod3 = boolean;**
+
+
+**break;**
 
 
 
+**//offset 0x123456**
 
+**public void speed (int value){}**
+
+**ADD_DOUBLE_VOID_HOOK(mod3, seedel, old_seedel, 120.0)**
+
+```cpp
+MSHookFunction(
+ (void *)getAbsoluteAddress(targetLibName, 0x123456),
+ (void*)seedel,
+ (void **) &old_seedel);
+```
+
+**وينطبق هاذا على الدوال التاليه**
+
+## #ADD_BOOL_VOID_HOOK
+## #ADD_FLOAT_VOID_HOOK
+## #ADD_INT_VOID_HOOK
+
+---
+### وهاذا اخر نوع الي هو نوع void بس يحتاج Update
 
 
 
