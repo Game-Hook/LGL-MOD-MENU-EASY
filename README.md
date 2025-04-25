@@ -157,6 +157,7 @@ MSHookFunction(
 ## الان نجي الى الدوال التي تكون void 
 ## # ADD_DOUBLE_VOID_HOOK
 `ADD_DOUBLE_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double)`
+
 **مثال للفهم**
 
 **bool mod3 = false;**
@@ -193,12 +194,45 @@ MSHookFunction(
 
 ---
 ### وهاذا اخر نوع الي هو نوع void بس يحتاج Update
+## #ADD_INT_VOID_UPDATE_HOOK
+
+**`ADD_INT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Int);`**
+
+**مثال للفهم**
+
+**bool mod4 = false;**
+
+
+**case 4:**
+
+
+**mod4 = boolean;**
+
+
+**break;**
 
 
 
+**//offset 0x123456**
+
+**public void Update (){}**
+
+**//offset 0x12345678**
+
+**public void speed (int value){}**
+
+**ADD_INT_VOID_UPDATE_HOOK(mod4, old_SpeedGG1, old_SpeedGG2, SpeedGG1, 9999);**
+```cpp
+old_SpeedGG2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x12345678);
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x123456), (void *) SpeedGG1, (void **) &old_SpeedGG1);
+```
 
 
+**وينطبق هاذا على الدوال التاليه**
 
+## #ADD_BOOL_VOID_UPDATE_HOOK
+## #ADD_FLOAT_VOID_UPDATE_HOOK
+## #ADD_DOUBLE_VOID_UPDATE_HOOK
 
 
 ---
