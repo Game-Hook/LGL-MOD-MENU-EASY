@@ -234,6 +234,68 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x123456), (void *) Spe
 ## #ADD_FLOAT_VOID_UPDATE_HOOK
 ## #ADD_DOUBLE_VOID_UPDATE_HOOK
 
+---
+
+## ملخص سريع جميع البيانات وطرق 
+**اوفسيت فقط**
+
+```cpp
+ADD_BOOL_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
+```
+```cpp
+ADD_FLOAT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Float);
+```
+```cpp
+ADD_DOUBLE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double);
+```
+```cpp
+ADD_INT_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int);
+```
+
+**اوفسيت مع Update**
+
+```cpp
+ADD_BOOL_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Bool);
+```
+```cpp
+ADD_FLOAT_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Float);
+```
+```cpp
+ADD_DOUBLE_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Double);
+```
+```cpp
+ADD_INT_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, offsetFOR, edit_Int);
+```
+
+**اوفسيت من نوع void**
+
+```cpp
+ADD_BOOL_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Bool);
+```
+```cpp
+ADD_FLOAT_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Float);
+```
+```cpp
+ADD_DOUBLE_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Double);
+```
+```cpp
+ADD_INT_VOID_HOOK(hook_name, hook_name_point_func, hook_name_fake_func, edit_Int);
+```
+**اوفسيت من نوع void ويحتاج Update**
+
+```cpp
+ADD_BOOL_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Bool);
+```
+```cpp
+ADD_FLOAT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Float);
+```
+```cpp
+ADD_DOUBLE_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Double);
+```
+```cpp
+ADD_INT_VOID_UPDATE_HOOK(hook_name, hook_name_point_func, hook_name_point_func2, hook_name_fake_func, edit_Int);
+```
+
 
 ---
 **الدوال المستغدمه**.
