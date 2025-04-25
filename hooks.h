@@ -220,7 +220,7 @@ void hook_name_fake_func(void *instance, int value) { \
     void (*hook_name_point_func)(void *instance); \
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
-            if (isBoolVoidVariable2) { \
+            if (hook_name) { \
                 hook_name_point_func2(instance, edit_Bool); \
             } \
         } \
@@ -248,7 +248,7 @@ void hook_name_fake_func(void *instance, int value) { \
     void (*hook_name_point_func)(void *instance); \
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
-            if (isBoolVoidVariable2) { \
+            if (hook_name) { \
                 hook_name_point_func2(instance, edit_Double); \
             } \
         } \
@@ -262,7 +262,7 @@ void hook_name_fake_func(void *instance, int value) { \
     void (*hook_name_point_func)(void *instance); \
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
-            if (isBoolVoidVariable2) { \
+            if (hook_name) { \
                 hook_name_point_func2(instance, edit_Int); \
             } \
         } \
