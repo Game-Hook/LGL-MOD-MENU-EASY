@@ -170,9 +170,52 @@ MSHookFunction(
 ---
 **الدوال المستغدمه**.
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code1.png)
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code2.png)
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code3.png)
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/1-1.png)
-
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code4.png)
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/2.png)
+```cpp
+BoolVoidOffset2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x000000);
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) UpdateForBoolVoidOffset1, (void **) &old_UpdateForBoolVoidOffset1);
+```
+**32bit**
+```cpp
+BoolVoidOffset2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x000000);
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) UpdateForBoolVoidOffset1, (void **) &old_UpdateForBoolVoidOffset1);
+```
