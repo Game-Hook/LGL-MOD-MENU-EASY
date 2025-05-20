@@ -16,7 +16,7 @@
 //edit_Bool || قيمة تعديل 
 // edit_Bool => (true or false)
 //edit_Float || قيمة تعديل
-// edit_Float => 9999.0f
+// edit_Float => 9999.0
 //edit_Int || قيمة تعديل 
 // edit_Int => 9999
 //edit_Double || قيمة تعديل
