@@ -30,6 +30,8 @@
 ## 📂 Jump to Section
 
 - <a href="mod">Offset-based Hooks</a>
+
+- <a href="#malik"> offset نوع الاول الذي يتعامل مع  </a>
 - <a href="mod2">Hooks with Offset + Update</a>
 - <a href="mod3">Void Return Type Hooks</a>
 - <a href="mod4">Void + Update Hooks</a>
@@ -37,7 +39,7 @@
 - <a href="mod6">Example: Hooking a Function at Offset `0x123456` All Function</a>
 ---
 
-<div id="mod">
+<div id="malik">
 ## 🔧 Offset-based Hooks
 
 ### `ADD_BOOL_HOOK`
