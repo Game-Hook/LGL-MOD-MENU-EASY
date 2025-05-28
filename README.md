@@ -29,12 +29,12 @@
 
 ## 📂 Jump to Section
 
-- <a href="mod">[Offset-based Hooks]</a>
-- <a href="mod2">[Hooks with Offset + Update]</a>
-- <a href="mod3">[Void Return Type Hooks]</a>
-- <a href="mod4">[Void + Update Hooks]</a>
-- <a href="mod5">[All Hooks Summary]</a>
-- <a href="mod6">[Example: Hooking a Function at Offset `0x123456` All Function]</a>
+- <a href="mod">Offset-based Hooks</a>
+- <a href="mod2">Hooks with Offset + Update</a>
+- <a href="mod3">Void Return Type Hooks</a>
+- <a href="mod4">Void + Update Hooks</a>
+- <a href="mod5">All Hooks Summary</a>
+- <a href="mod6">Example: Hooking a Function at Offset `0x123456` All Function</a>
 ---
 
 <div id="mod">
@@ -55,14 +55,14 @@ MSHookFunction(
  (void*)Shop,
  (void **) &oldShop);
 ```
-</div>
+
 🧠 Applicable for: `ADD_BOOL_HOOK`, `ADD_FLOAT_HOOK`, `CREATE_DOUBLE_HOOK`, `CREATE_INT_HOOK`
 
 > Ensure correct value formats:  
 > - `float`: `9999.12353`  
 > - `double`: `9999.1233456788675`  
 > - `int`: Integer value like `123456789`
-
+</div>
 ---
 
 <div id="mod2">
@@ -87,6 +87,7 @@ MSHookFunction(
 - `ADD_DOUBLE_UPDATE_HOOK`
 - `ADD_INT_UPDATE_HOOK`
 </div>
+
 ---
 
 <div id="mod3">
