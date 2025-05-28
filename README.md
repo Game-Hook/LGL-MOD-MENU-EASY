@@ -29,17 +29,23 @@
 
 ## 📂 Jump to Section
 
-- <a href="mod">Offset-based Hooks</a>
 
-- <a href="#malik"> offset نوع الاول الذي يتعامل مع  </a>
-- <a href="mod2">Hooks with Offset + Update</a>
-- <a href="mod3">Void Return Type Hooks</a>
-- <a href="mod4">Void + Update Hooks</a>
-- <a href="mod5">All Hooks Summary</a>
-- <a href="mod6">Example: Hooking a Function at Offset `0x123456` All Function</a>
+– <a href="#mod"> Offset-based Hooks  </a>
+-
+– <a href="#mod2"> Hooks with Offset + Update  </a>
+-
+– <a href="#mod3"> Void Return Type Hooks  </a>
+-
+– <a href="#mod4"> Void + Update Hooks  </a>
+-
+– <a href="#mod5"> All Hooks Summary  </a>
+-
+– <a href="#mod6"> Example: Hooking a Function at Offset `0x123456` All Function  </a>
+-
+
 ---
 
-<div id="malik">
+<div id="mod">
 ## 🔧 Offset-based Hooks
 
 ### `ADD_BOOL_HOOK`
@@ -196,6 +202,7 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hoo
 ```
 
 ---
+<div id="mod6">
 ### 🧠 Example: Hooking a Function at Offset `0x123456` All Function
 
 
@@ -256,7 +263,7 @@ BoolVoidOffset2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x000
 MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) UpdateForBoolVoidOffset1, (void **) &old_UpdateForBoolVoidOffset1);
 ```
 
-
+</div>
 
 ---
 
