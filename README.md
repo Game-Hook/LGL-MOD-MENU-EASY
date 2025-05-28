@@ -46,6 +46,7 @@
 ---
 
 <div id="mod">
+ 
 ## 🔧 Offset-based Hooks
 
 ### `ADD_BOOL_HOOK`
@@ -70,10 +71,13 @@ MSHookFunction(
 > - `float`: `9999.12353`  
 > - `double`: `9999.1233456788675`  
 > - `int`: Integer value like `123456789`
+
 </div>
+
 ---
 
 <div id="mod2">
+ 
 ## 🛠️ Offset + Update Hooks
 
 ### `ADD_FLOAT_UPDATE_HOOK`
@@ -94,11 +98,13 @@ MSHookFunction(
 - `ADD_FLOAT_UPDATE_HOOK`
 - `ADD_DOUBLE_UPDATE_HOOK`
 - `ADD_INT_UPDATE_HOOK`
+  
 </div>
 
 ---
 
 <div id="mod3">
+ 
 ## 🔁 Void Return Type Hooks
 
 ### `ADD_DOUBLE_VOID_HOOK`
@@ -119,10 +125,12 @@ MSHookFunction(
 - `ADD_FLOAT_VOID_HOOK`
 - `ADD_DOUBLE_VOID_HOOK`
 - `ADD_INT_VOID_HOOK`
+  
 </div>
 ---
 
 <div id="mod4">
+ 
 ## 🔄 Void + Update Hooks
 
 ### `ADD_INT_VOID_UPDATE_HOOK`
@@ -145,10 +153,13 @@ MSHookFunction(
 - `ADD_FLOAT_VOID_UPDATE_HOOK`
 - `ADD_DOUBLE_VOID_UPDATE_HOOK`
 - `ADD_INT_VOID_UPDATE_HOOK`
+  
 </div>
+
 ---
 
 <div id="mod5">
+ 
 ## 📋 Hooks Summary
 
 ### Offset Hooks
@@ -186,6 +197,8 @@ ADD_FLOAT_VOID_UPDATE_HOOK(...);
 ADD_DOUBLE_VOID_UPDATE_HOOK(...);
 ADD_INT_VOID_UPDATE_HOOK(...);
 ```
+
+</div>
 
 ---
 
