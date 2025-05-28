@@ -217,7 +217,8 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hoo
 ---
 <div id="mod6">
  
-### 🧠 Example: Hooking a Function at Offset `0x123456` All Function
+### 🧠 The macro was created from these functions, and most of them are found in the `Dump.cs` file.
+
 
 
 ![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code1.png)
