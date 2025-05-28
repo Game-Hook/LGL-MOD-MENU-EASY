@@ -1,4 +1,5 @@
 
+
 # LGL-MOD-MENU-EASY
 
 📌 **A project that simplifies writing code inside LGL-MOD-MENU using `Dump.cs` data.**
@@ -28,14 +29,15 @@
 
 ## 📂 Jump to Section
 
-- [Offset-based Hooks](#offset-based-hooks)
-- [Hooks with Offset + Update](#offset--update-hooks)
-- [Void Return Type Hooks](#void-return-type-hooks)
-- [Void + Update Hooks](#void--update-hooks)
-- [All Hooks Summary](#hooks-summary)
-
+- <a href="mod">[Offset-based Hooks]</a>
+- <a href="mod2">[Hooks with Offset + Update]</a>
+- <a href="mod3">[Void Return Type Hooks]</a>
+- <a href="mod4">[Void + Update Hooks]</a>
+- <a href="mod5">[All Hooks Summary]</a>
+- <a href="mod6">[Example: Hooking a Function at Offset `0x123456` All Function]</a>
 ---
 
+<div id="mod">
 ## 🔧 Offset-based Hooks
 
 ### `ADD_BOOL_HOOK`
@@ -53,16 +55,17 @@ MSHookFunction(
  (void*)Shop,
  (void **) &oldShop);
 ```
-
+</div>
 🧠 Applicable for: `ADD_BOOL_HOOK`, `ADD_FLOAT_HOOK`, `CREATE_DOUBLE_HOOK`, `CREATE_INT_HOOK`
 
 > Ensure correct value formats:  
-> - `float`: `9999.0f`  
-> - `double`: `9999.0`  
+> - `float`: `9999.12353`  
+> - `double`: `9999.1233456788675`  
 > - `int`: Integer value like `123456789`
 
 ---
 
+<div id="mod2">
 ## 🛠️ Offset + Update Hooks
 
 ### `ADD_FLOAT_UPDATE_HOOK`
@@ -83,9 +86,10 @@ MSHookFunction(
 - `ADD_FLOAT_UPDATE_HOOK`
 - `ADD_DOUBLE_UPDATE_HOOK`
 - `ADD_INT_UPDATE_HOOK`
-
+</div>
 ---
 
+<div id="mod3">
 ## 🔁 Void Return Type Hooks
 
 ### `ADD_DOUBLE_VOID_HOOK`
@@ -106,9 +110,10 @@ MSHookFunction(
 - `ADD_FLOAT_VOID_HOOK`
 - `ADD_DOUBLE_VOID_HOOK`
 - `ADD_INT_VOID_HOOK`
-
+</div>
 ---
 
+<div id="mod4">
 ## 🔄 Void + Update Hooks
 
 ### `ADD_INT_VOID_UPDATE_HOOK`
@@ -131,9 +136,10 @@ MSHookFunction(
 - `ADD_FLOAT_VOID_UPDATE_HOOK`
 - `ADD_DOUBLE_VOID_UPDATE_HOOK`
 - `ADD_INT_VOID_UPDATE_HOOK`
-
+</div>
 ---
 
+<div id="mod5">
 ## 📋 Hooks Summary
 
 ### Offset Hooks
@@ -187,9 +193,67 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hoo
 ```
 
 ---
+### 🧠 Example: Hooking a Function at Offset `0x123456` All Function
 
-🎨 Images used in documentation (hosted on GitHub):  
-- `Code1.png`, `Code2.png`, `Code3.png`, `1-1.png`, `Code4.png`, `2.png`
+
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code1.png)
+**64bit**
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code2.png)
+**64bit**
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code3.png)
+**64bit**
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/1-1.png)
+**64bit**
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/Code4.png)
+**64bit**
+```cpp
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+**32bit**
+```cpp
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hookingBool1, (void **) &old_hookingBool1);
+```
+![Text](https://github.com/Game-Hook/LGL-MOD-MENU-EASY/blob/main/2.png)
+**64bit**
+```cpp
+BoolVoidOffset2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x000000);
+A64HookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) UpdateForBoolVoidOffset1, (void **) &old_UpdateForBoolVoidOffset1);
+```
+**32bit**
+```cpp
+BoolVoidOffset2 = (void (*)(void *, bool))getAbsoluteAddress(targetLibName,0x000000);
+MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) UpdateForBoolVoidOffset1, (void **) &old_UpdateForBoolVoidOffset1);
+```
+
+
 
 ---
 
