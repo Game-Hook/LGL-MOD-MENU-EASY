@@ -216,6 +216,7 @@ MSHookFunction((void *)getAbsoluteAddress(targetLibName, 0x000000), (void *) hoo
 
 ---
 <div id="mod6">
+ 
 ### 🧠 Example: Hooking a Function at Offset `0x123456` All Function
 
 
