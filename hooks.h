@@ -1,6 +1,6 @@
 // فقط لنسخ 32 بت و 64 بت
 // For 32-bit and 64-bit systems
-
+//@ Malik
 /* ========================================================================
    متغيرات وتعريفات الهوك (Hook Macros and Variables)
    ========================================================================
@@ -39,7 +39,7 @@
     bool hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
             if (hook_name) { \
-                return (edit_Bool); \
+                return edit_Bool; \
             } \
         } \
         return hook_name_point_func(instance); \
@@ -96,7 +96,7 @@
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
             if (hook_name) { \
-                *(bool *) ((uint32_t) instance + offsetFOR) = (edit_Bool); \
+                *(bool *) ((uint32_t) instance + offsetFOR) = edit_Bool; \
             } \
         } \
         return hook_name_point_func(instance); \
@@ -153,7 +153,7 @@
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
             if (hook_name) { \
-                *(bool *) ((uint64_t) instance + offsetFOR) = (edit_Bool); \
+                *(bool *) ((uint64_t) instance + offsetFOR) = edit_Bool; \
             } \
         } \
         return hook_name_point_func(instance); \
@@ -210,7 +210,7 @@
     void hook_name_fake_func(void *instance, bool value) { \
         if (instance != NULL) { \
             if (hook_name) { \
-                hook_name_point_func(instance, (edit_Bool)); \
+                hook_name_point_func(instance, edit_Bool); \
                 return; \
             } \
         } \
@@ -272,7 +272,7 @@
     void hook_name_fake_func(void *instance) { \
         if (instance != NULL) { \
             if (hook_name) { \
-                hook_name_point_func2(instance, (edit_Bool)); \
+                hook_name_point_func2(instance, edit_Bool); \
             } \
         } \
         return hook_name_point_func(instance); \
